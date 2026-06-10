@@ -1,0 +1,6 @@
+# Netlify 部署配置（纯静态站，无 build 步骤）
+[build]
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"

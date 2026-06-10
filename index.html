@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShuYan · Director Showreel</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230a0a0a'/><text x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='22' fill='%23d4a857'>S</text></svg>" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ShuYan · Director Showreel" />
+  <meta property="og:description" content="广告导演 / 视觉创作者 · 用影像连接品牌与人心。" />
+  <meta property="og:image" content="./assets/img/hero-01.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ShuYan · Director Showreel" />
+  <meta name="twitter:description" content="广告导演 / 视觉创作者 · 用影像连接品牌与人心。" />
+  <meta name="twitter:image" content="./assets/img/hero-01.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&family=Italianno&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#0a0a0a;
+    --bg-soft:#111;
+    --line:#1d1d1d;
+    --text:#f3f3f3;
+    --muted:#8a8a8a;
+    --muted-2:#5a5a5a;
+    --gold:#d4a857;
+    --gold-soft:#b6924a;
+    --max:1280px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--text);font-family:"Inter","Noto Sans SC",-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
+  body{overflow-x:hidden;line-height:1.6}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit;text-decoration:none}
+
+  .hero{position:relative;display:grid;grid-template-columns:0.9fr 1.1fr;min-height:100vh;border-bottom:1px solid var(--line)}
+  .hero-photo{position:relative;overflow:hidden;background:#000}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:55% center;filter:contrast(1.05) saturate(.92);transform:scale(1.02);transition:transform 1.6s ease}
+  .hero-photo:hover img{transform:scale(1.08)}
+  .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.15),transparent 45%)}
+  .hero-photo .signature{position:absolute;left:8%;bottom:14%;margin-left:-8px;font-family:"Italianno",cursive;color:var(--gold);font-size:64px;line-height:1;letter-spacing:1px;z-index:2;text-shadow:0 2px 24px rgba(0,0,0,.6);padding-bottom:16px}
+  .hero-photo .meta{position:absolute;left:8%;bottom:0;color:rgba(255,255,255,.85);font-size:13px;letter-spacing:1px;z-index:2;padding-bottom:6px}
+  .hero-photo .meta .name{margin-bottom:4px}
+  .hero-photo .meta .role{color:var(--muted);font-size:12px}
+
+  .hero-content{position:relative;padding:120px 80px 80px;display:flex;flex-direction:column;justify-content:space-between}
+  .hero-eyebrow{font-size:13px;letter-spacing:4px;color:var(--muted);margin-bottom:20px}
+  .hero-title{font-family:"Oswald",sans-serif;font-weight:500;font-size:clamp(56px,7.4vw,108px);line-height:1;letter-spacing:6px;text-transform:uppercase}
+  .hero-title span{display:block}
+  .hero-divider{width:48px;height:1px;background:var(--text);margin:36px 0 28px}
+  .hero-tagline{font-size:22px;font-weight:300;letter-spacing:2px;color:var(--text);margin-bottom:8px}
+  .hero-sub{font-size:12px;letter-spacing:3px;color:var(--muted);text-transform:uppercase}
+  .hero-tags{display:flex;gap:28px;margin-top:48px;font-size:12px;letter-spacing:4px;color:var(--muted);text-transform:uppercase}
+  .hero-tags span{position:relative}
+  .hero-tags span::after{content:"/";position:absolute;right:-22px;color:var(--muted-2)}
+  .hero-tags span:last-child::after{display:none}
+  .hero-contact{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding-top:48px;border-top:1px solid var(--line);margin-top:64px}
+  .hc-label{font-size:11px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .hc-label svg{width:14px;height:14px;opacity:.85}
+  .hc-value{font-size:14px;letter-spacing:1px}
+
+  .about{display:grid;grid-template-columns:1fr 1.2fr;border-bottom:1px solid var(--line)}
+  .about-text{padding:120px 80px}
+  .section-eyebrow{font-family:"Oswald",sans-serif;font-size:34px;letter-spacing:6px;font-weight:500;text-transform:uppercase}
+  .section-cn{font-size:15px;letter-spacing:8px;color:var(--muted);margin:8px 0 56px}
+  .about-cn{font-size:17px;line-height:2;color:var(--text);max-width:480px;margin-bottom:36px}
+  .about-en{font-size:13px;line-height:1.9;color:var(--muted);max-width:480px;letter-spacing:.4px}
+  .about-photo{position:relative;overflow:hidden;background:#000;min-height:560px}
+  .about-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:contrast(1.05);transition:transform 1.2s ease}
+  .about-photo:hover img{transform:scale(1.06)}
+
+  .works{padding:120px 0;border-bottom:1px solid var(--line)}
+  .works-head{display:flex;justify-content:space-between;align-items:flex-end;padding:0 80px 64px}
+  .works-head .right{font-size:12px;letter-spacing:4px;color:var(--muted);text-transform:uppercase;display:flex;align-items:center;gap:10px;cursor:pointer}
+  .works-head .right .arrow{width:24px;height:24px;border-radius:50%;border:1px solid var(--muted);display:inline-flex;align-items:center;justify-content:center;font-size:10px}
+  .works-tabs{display:flex;justify-content:center;gap:56px;padding:0 80px 56px;border-bottom:1px solid var(--line)}
+  .works-tab{background:transparent;border:0;padding:18px 0;cursor:pointer;color:var(--muted);transition:color .3s;position:relative;font-family:inherit;text-align:left}
+  .works-tab .en{display:block;font-family:"Oswald",sans-serif;font-size:14px;letter-spacing:3px;text-transform:uppercase}
+  .works-tab .cn{display:block;font-family:"Noto Sans SC","PingFang SC",sans-serif;font-size:12px;letter-spacing:4px;margin-top:6px}
+  .works-tab:hover{color:var(--text)}
+  .works-tab.active{color:var(--gold)}
+  .works-tab.active::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--gold)}
+  .work.hidden{display:none}
+  .photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:8px 80px 80px}
+  .photo-grid.hidden{display:none}
+  .photo-cell{position:relative;aspect-ratio:5/8;overflow:hidden;background:#000;cursor:pointer}
+  .photo-cell img{width:100%;height:100%;object-fit:cover;filter:saturate(.95) contrast(1.05);transition:transform .8s ease}
+  .photo-cell:hover img{transform:scale(1.06)}
+  .photo-cap{position:absolute;left:0;right:0;bottom:0;padding:18px 16px 14px;background:linear-gradient(to top,rgba(0,0,0,.78),rgba(0,0,0,0));opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .4s ease;pointer-events:none}
+  .photo-cell:hover .photo-cap{opacity:1;transform:translateY(0)}
+  .photo-cap .num{font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold)}
+  .photo-cap .t{font-family:"Noto Sans SC","PingFang SC",sans-serif;font-size:13px;letter-spacing:2px;color:var(--text);margin-top:4px;display:block}
+  .work{border-top:1px solid var(--line);padding:32px 80px}
+  .work:first-child{border-top:none}
+  .work-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:stretch}
+  .work.reverse .work-grid{grid-template-columns:1fr 1.3fr}
+  .work.reverse .work-media{order:2}
+  .work-media{position:relative;overflow:hidden;aspect-ratio:16/10;background:#000}
+  .work-media img,.work-media video{width:100%;height:100%;object-fit:cover;filter:saturate(.95) contrast(1.05);transition:transform 1.2s ease;display:block}
+  .work:hover .work-media img,.work:hover .work-media video{transform:scale(1.04)}
+  .work-info{display:flex;flex-direction:column;justify-content:center;padding:24px 8px}
+  .work-num{font-family:"Oswald",sans-serif;font-size:30px;letter-spacing:4px;color:var(--muted);font-weight:400;margin-bottom:18px}
+  .work-title{font-size:28px;font-weight:500;letter-spacing:2px;margin-bottom:18px}
+  .work-client{font-size:13px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
+  .work-role{font-size:12px;letter-spacing:2px;color:var(--muted);margin-bottom:22px}
+  .work-tags{display:flex;gap:18px;flex-wrap:wrap}
+  .work-tags span{font-size:12px;letter-spacing:2px;color:var(--muted)}
+  .work-tags span::before{content:"#";color:var(--gold-soft);margin-right:2px}
+
+  .bts{padding:110px 0;border-bottom:1px solid var(--line)}
+  .bts .head{padding:0 80px 56px}
+  .bts-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:0 80px}
+  .bts-item{position:relative;overflow:hidden;background:#0a0a0a;aspect-ratio:3/4;cursor:pointer}
+  .bts-item img{width:100%;height:100%;object-fit:cover;filter:grayscale(20%) contrast(1.02);transition:transform 1.2s ease,filter .6s ease}
+  .bts-item:hover img{transform:scale(1.05);filter:grayscale(0%) contrast(1.05)}
+  .bts-cap{position:absolute;left:0;right:0;bottom:0;padding:18px 18px 16px;display:flex;justify-content:space-between;align-items:flex-end;color:#f3f3f3;background:linear-gradient(0deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.25) 55%,transparent 100%);text-transform:uppercase}
+  .bts-cap .cn{font-size:12px;letter-spacing:3px}
+  .bts-cap .en{font-size:10px;letter-spacing:2px;color:var(--muted)}
+
+  .clients{padding:90px 0 110px;border-bottom:1px solid var(--line)}
+  .clients .head{padding:0 80px 48px}
+  .clients-row{display:flex;justify-content:space-between;align-items:center;padding:0 80px;flex-wrap:wrap;gap:32px}
+  .client-logo{color:#9a9a9a;font-family:"Oswald",sans-serif;letter-spacing:4px;font-weight:500;opacity:.85;transition:opacity .3s,color .3s;display:flex;align-items:center;gap:10px}
+  .client-logo:hover{opacity:1;color:#f3f3f3}
+  .client-logo.lg{font-size:34px}
+  .client-logo.md{font-size:24px}
+  .client-logo .deer{width:30px;height:30px;border:1.5px solid currentColor;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:16px}
+
+  .contact{padding:120px 80px;border-bottom:1px solid var(--line)}
+ .contact-info{display:grid;grid-template-columns:1fr 1fr 1fr;gap:80px;align-items:start}
+  .contact-info > .reveal{text-align:left}
+  .contact-info .desc{font-size:14px;line-height:1.9;color:var(--muted);max-width:340px;margin-top:36px}
+ .contact-info .c-list{justify-self:center;text-align:left}
+  .c-list{margin-top:0;display:flex;flex-direction:column;gap:28px;align-items:flex-start}
+  .c-row{display:flex;align-items:flex-start;gap:18px;flex-direction:row}
+  .c-icon{width:36px;height:36px;flex:0 0 36px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+  .c-icon svg{width:14px;height:14px}
+  .c-text{text-align:left}
+  .c-text .l{font-size:11px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:4px}
+  .c-text .v{font-size:15px;letter-spacing:1px}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width: 980px){
+    .hero,.about{grid-template-columns:1fr}
+    .hero-photo,.about-photo{min-height:420px;height:60vh}
+    .hero-photo .signature{margin-left:-16px}
+    .hero-content{padding:56px 28px}
+    .hero-contact{grid-template-columns:1fr;gap:24px}
+    .about-text{padding:64px 28px}
+    .works-head{padding:0 28px 40px}
+    .works-tabs{padding:0 28px 32px;gap:24px;flex-wrap:wrap}
+    .work{padding:24px 28px}
+    .work-grid,.work.reverse .work-grid{grid-template-columns:1fr;gap:24px}
+    .work.reverse .work-media{order:0}
+    .bts .head,.bts-grid,.clients .head,.clients-row{padding-left:28px;padding-right:28px}
+    .bts-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+    .photo-grid{grid-template-columns:repeat(2,1fr);padding:8px 28px 48px;gap:6px}
+    .contact{padding:64px 28px}
+    .contact-info{grid-template-columns:1fr;gap:48px}
+    .contact-info .c-list{justify-self:start}
+    .c-list{align-items:flex-start}
+    .c-row{flex-direction:row}
+    .bracket{top:18px;right:18px}
+  }
+
+  @media (max-width: 560px){
+    .hero-title{font-size:54px;letter-spacing:4px}
+    .hero-tags{flex-wrap:wrap;gap:14px}
+    .hero-tags span::after{display:none}
+    .section-eyebrow{font-size:26px;letter-spacing:4px}
+    .hero-photo .signature{font-size:48px;margin-left:-1px}
+    .work-title{font-size:22px}
+    .bts-grid{grid-template-columns:1fr 1fr;gap:14px}
+    .clients-row{justify-content:flex-start;gap:24px}
+    .client-logo.lg{font-size:26px}
+  }
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;height:72px;display:flex;align-items:center;transition:background .4s ease,border-color .4s ease,backdrop-filter .4s ease}
+  .nav.scrolled{background:rgba(10,10,10,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:var(--max);margin:0 auto;padding:0 48px;width:100%;display:flex;align-items:center;justify-content:space-between;gap:32px}
+  .nav-logo{font-family:"Oswald",sans-serif;font-size:18px;letter-spacing:6px;font-weight:500;color:var(--text);text-transform:uppercase;flex:0 0 auto;display:flex;align-items:center;gap:2px}
+  .nav-logo span{color:var(--gold)}
+  .nav-links{display:flex;gap:36px;list-style:none;margin:0;padding:0}
+  .nav-links a{font-size:12px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;transition:color .3s;position:relative;display:inline-block;padding:4px 0}
+  .nav-links a:hover,.nav-links a.active{color:var(--text)}
+  .nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+  .nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+  .nav-cta{padding:9px 20px;border:1px solid var(--gold);color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase;transition:background .3s,color .3s;flex:0 0 auto}
+  .nav-cta:hover{background:var(--gold);color:#0a0a0a}
+  .nav-toggle{display:none;flex-direction:column;gap:5px;width:32px;height:32px;justify-content:center;align-items:flex-end;background:transparent;border:none;cursor:pointer;padding:0}
+  .nav-toggle span{display:block;height:1.5px;background:var(--text);transition:transform .35s ease,opacity .25s ease,width .25s ease}
+  .nav-toggle span:nth-child(1){width:24px}
+  .nav-toggle span:nth-child(2){width:18px}
+  .nav-toggle span:nth-child(3){width:12px}
+  .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);width:24px}
+  .nav-toggle.open span:nth-child(2){opacity:0}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);width:24px}
+
+  @media (max-width: 860px){
+    /* 顶部导航整体缩小，适配移动端 */
+    .nav{height:60px}
+    .nav-inner{padding:0 20px;gap:16px}
+    .nav-logo{font-size:15px;letter-spacing:4px}
+
+    /* 抽屉由全屏改为右上角紧凑下拉，避免突兀 */
+    .nav-links{
+      position:fixed;
+      top:60px;
+      right:16px;
+      left:auto;
+      bottom:auto;
+      width:auto;
+      min-width:180px;
+      max-width:calc(100vw - 32px);
+      background:rgba(15,15,15,.96);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      border:1px solid var(--line);
+      border-radius:4px;
+      flex-direction:column;
+      gap:2px;
+      padding:8px;
+      align-items:stretch;
+      transform:translateY(-6px);
+      opacity:0;
+      visibility:hidden;
+      transition:transform .22s ease,opacity .22s ease,visibility .22s ease;
+    }
+    .nav-links.open{transform:translateY(0);opacity:1;visibility:visible}
+    .nav-links a{
+      font-size:13px;
+      letter-spacing:2px;
+      padding:10px 14px;
+      border-radius:4px;
+      text-align:left;
+    }
+    .nav-links a::after{display:none}
+    .nav-links a.active,.nav-links a:hover{
+      background:rgba(212,168,87,.08);
+      color:var(--gold);
+    }
+    .nav-cta{display:none}
+    .nav-toggle{display:flex}
+  }
+
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">SHU<span>YAN</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#bts">BTS</a></li>
+      <li><a href="#clients">Clients</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Contact</a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-photo">
+    <img src="./assets/img/hero-01.jpg" alt="portrait" />
+    <div class="signature">ShuYan</div>
+    <div class="meta">
+      <div class="name">冯书彦  ShuYan</div>
+      <div class="role">导演 / 编剧 / 剪辑</div>
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="reveal">
+      <div class="hero-eyebrow">广告导演 / 视觉创作者</div>
+      <h1 class="hero-title"><span>Director</span><span>Showreel</span></h1>
+      <div class="hero-divider"></div>
+      <div class="hero-tagline">用影像连接品牌与人心。</div>
+      <div class="hero-sub">Connecting brands to hearts through films.</div>
+      <div class="hero-tags">
+        <span>Story</span>
+        <span>Image</span>
+        <span>Brand</span>
+      </div>
+    </div>
+    <div class="hero-contact reveal">
+      <div>
+        <div class="hc-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg>
+          Phone
+        </div>
+        <div class="hc-value">13248355241</div>
+      </div>
+      <div>
+        <div class="hc-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          Email
+        </div>
+        <div class="hc-value">shuyanfeng118@163.com</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-text">
+    <div class="reveal">
+      <div class="section-eyebrow">About Me</div>
+      <div class="section-cn">关 于 我</div>
+      <p class="about-cn">
+        热爱故事，关注细节，擅长通过影像语言<br/>
+        传递品牌价值与情感共鸣。<br/>
+        镜头是我的表达方式，故事是我的信仰。
+      </p>
+      <p class="about-en">
+        I love stories, pay attention to details,<br/>
+        and excel at conveying brand value and<br/>
+        emotional resonance through visual language.<br/>
+        The camera is my way of expression,<br/>
+        and stories are my belief.
+      </p>
+    </div>
+  </div>
+  <div class="about-photo reveal">
+    <img src="./assets/img/about-01.jpg" alt="on set" />
+  </div>
+</section>
+
+<section class="works" id="works">
+  <div class="works-head">
+    <div>
+      <div class="section-eyebrow reveal">Selected Works</div>
+      <div class="section-cn reveal">作 品 精 选</div>
+    </div>
+  </div>
+  <div class="works-tabs reveal">
+    <button class="works-tab active" data-filter="ad">Featured Ads</button>
+    <button class="works-tab" data-filter="ai">AI Creative</button>
+    <button class="works-tab" data-filter="photo">Photography</button>
+  </div>
+
+  <div class="work" data-category="ad">
+    <div class="work-grid reveal">
+      <div class="work-media"><video data-src="./assets/video/ad-01.mp4" muted loop playsinline preload="none"></video></div>
+      <div class="work-info">
+        <div class="work-num">01</div>
+        <div class="work-title">《新年心愿》</div>
+        <div class="work-client">宣传片 - 公共事务</div>
+        <div class="work-role">剪辑 / 调色</div>
+        <div class="work-tags"><span>情感</span><span>愿望</span><span>追光</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="work reverse" data-category="ad">
+    <div class="work-grid reveal">
+      <div class="work-info">
+        <div class="work-num">02</div>
+        <div class="work-title">《我们.Women》</div>
+        <div class="work-client">Bebetour 品牌广告</div>
+        <div class="work-role">导演 / 编剧</div>
+        <div class="work-tags"><span>女性</span><span>温暖</span><span>母婴</span></div>
+      </div>
+      <div class="work-media"><video data-src="./assets/video/ad-02.mp4" muted loop playsinline preload="none"></video></div>
+    </div>
+  </div>
+
+  <div class="work" data-category="ad">
+   <div class="work-grid reveal">
+      <div class="work-media"><video data-src="./assets/video/ad-04.mp4" muted loop playsinline preload="none"></video></div>
+      <div class="work-info">
+        <div class="work-num">03</div>
+        <div class="work-title">《HEATTECH x Thermography》</div>
+        <div class="work-client">创意 潮流 混剪</div>
+        <div class="work-role">剪辑</div>
+        <div class="work-tags"><span>服饰</span><span>想象力</span><span>混剪</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="work reverse" data-category="ad">
+   <div class="work-grid reveal">
+     <div class="work-info">
+       <div class="work-num">04</div>
+       <div class="work-title">《柔护新生》</div>
+       <div class="work-client">Bebetour婴儿洗衣液 产品短片</div>
+       <div class="work-role">导演 / 摄影 / 剪辑</div>
+       <div class="work-tags"><span>洗护</span><span>自然</span><span>母婴</span></div>
+     </div>
+      <div class="work-media"><video data-src="./assets/video/ad-03.mp4" muted loop playsinline preload="none"></video></div>
+    </div>
+  </div>
+
+  <div class="work" data-category="ai">
+   <div class="work-grid reveal">
+      <div class="work-media"><video data-src="./assets/video/showreel-01.mp4" muted loop playsinline preload="none"></video></div>
+      <div class="work-info">
+        <div class="work-num">05</div>
+        <div class="work-title">《光，止步于你》</div>
+        <div class="work-client">La Roche-Posay(肤泉) AI视觉</div>
+        <div class="work-role">AI 导演 / 视觉</div>
+        <div class="work-tags"><span>防晒</span><span>UVA防护</span><span>敏感肌</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="work reverse" data-category="ai">
+    <div class="work-grid reveal">
+      <div class="work-info">
+        <div class="work-num">06</div>
+        <div class="work-title">《0.01 秒的工具》</div>
+        <div class="work-client">AI 产品广告</div>
+        <div class="work-role">AI 导演 / 编剧</div>
+        <div class="work-tags"><span>AI 影像</span><span>硬核</span><span>速度</span></div>
+     </div>
+      <div class="work-media"><video data-src="./assets/video/racing-01.mp4" muted loop playsinline preload="none"></video></div>
+  </div>
+ </div>
+
+  <div class="work" data-category="ai">
+    <div class="work-grid reveal">
+      <div class="work-media"><video data-src="./assets/video/snickers-01.mp4" muted loop playsinline preload="none"></video></div>
+      <div class="work-info">
+        <div class="work-num">07</div>
+        <div class="work-title">《解饿时刻》</div>
+        <div class="work-client">士力架 品牌 AI 广告</div>
+        <div class="work-role">AI 导演 / 视觉</div>
+        <div class="work-tags"><span>商业广告</span><span>饥饿</span><span>节奏感</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="photo-grid hidden">
+    <div class="photo-cell"><img src="./assets/img/acemiss-perfume-01.png" alt="AceMiss · 兰花" /><div class="photo-cap"><span class="num">07</span><span class="t">《AceMiss · 兰花》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/acemiss-perfume-02.png" alt="AceMiss · 海风" /><div class="photo-cap"><span class="num">08</span><span class="t">《AceMiss · 海风》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/acemiss-perfume-03.png" alt="AceMiss · 蝴蝶" /><div class="photo-cap"><span class="num">09</span><span class="t">《AceMiss · 蝴蝶》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/acemiss-perfume-04.png" alt="AceMiss · 冰霜" /><div class="photo-cap"><span class="num">10</span><span class="t">《AceMiss · 冰霜》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/acemiss-oral-01.png" alt="AceMiss · 蓬蓬瓶" /><div class="photo-cap"><span class="num">11</span><span class="t">《AceMiss · 蓬蓬瓶》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/acemiss-oral-02.png" alt="AceMiss · 银珠" /><div class="photo-cap"><span class="num">12</span><span class="t">《AceMiss · 银珠》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/acemiss-oral-03.png" alt="AceMiss · 柠光" /><div class="photo-cap"><span class="num">13</span><span class="t">《AceMiss · 柠光》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/acemiss-oral-04.png" alt="AceMiss · 净" /><div class="photo-cap"><span class="num">14</span><span class="t">《AceMiss · 净》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/rivi-01.png" alt="RIVI · 静物" /><div class="photo-cap"><span class="num">19</span><span class="t">《RIVI · 静物》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/rivi-02.png" alt="RIVI · 三瓶" /><div class="photo-cap"><span class="num">20</span><span class="t">《RIVI · 三瓶》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/rivi-03.png" alt="RIVI · 花艺" /><div class="photo-cap"><span class="num">21</span><span class="t">《RIVI · 花艺》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/red-eyrth-01.png" alt="RED EYRTH · 堆叠" /><div class="photo-cap"><span class="num">22</span><span class="t">《RED EYRTH · 堆叠》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/sleep-pillow-01.jpg" alt="睡眠枕 · 安睡" /><div class="photo-cap"><span class="num">15</span><span class="t">《睡眠枕 · 安睡》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/sleep-pillow-02.jpg" alt="睡眠枕 · 微笑" /><div class="photo-cap"><span class="num">16</span><span class="t">《睡眠枕 · 微笑》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/sleep-pillow-03.jpg" alt="睡眠枕 · 梦境" /><div class="photo-cap"><span class="num">17</span><span class="t">《睡眠枕 · 梦境》</span></div></div>
+    <div class="photo-cell"><img src="./assets/img/sleep-pillow-04.jpg" alt="睡眠枕 · 童话" /><div class="photo-cap"><span class="num">18</span><span class="t">《睡眠枕 · 童话》</span></div></div>
+  </div>
+</section>
+
+<section class="bts" id="bts">
+  <div class="head">
+    <div class="section-eyebrow reveal">Behind the Scenes</div>
+    <div class="section-cn reveal">幕 后 花 絮</div>
+  </div>
+  <div class="bts-grid">
+    <div class="bts-item reveal">
+      <img src="./assets/img/bts-01.jpg" alt="on set" />
+      <div class="bts-cap"><span class="cn">片场纪实</span><span class="en">On Set</span></div>
+    </div>
+    <div class="bts-item reveal">
+      <img src="./assets/img/bts-02.jpg" alt="lighting" />
+      <div class="bts-cap"><span class="cn">灯光测试</span><span class="en">Lighting</span></div>
+    </div>
+    <div class="bts-item reveal">
+      <img src="./assets/img/bts-03.jpg" alt="camera" />
+      <div class="bts-cap"><span class="cn">镜头语言</span><span class="en">Camera</span></div>
+    </div>
+    <div class="bts-item reveal">
+      <img src="./assets/img/bts-04.jpg" alt="color grading" />
+      <div class="bts-cap"><span class="cn">后期调色</span><span class="en">Color</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="clients" id="clients">
+  <div class="head">
+    <div class="section-eyebrow reveal">Clients</div>
+    <div class="section-cn reveal">合 作 客 户</div>
+  </div>
+  <div class="clients-row reveal">
+    <div class="client-logo lg" style="letter-spacing:2px;font-size:26px">BabyCare</div>
+    <div class="client-logo md" style="font-weight:700;letter-spacing:6px;">SNICKERS</div>
+    <div class="client-logo md" style="font-weight:600;letter-spacing:1.5px;">LA ROCHE-POSAY</div>
+    <div class="client-logo md" style="font-weight:600;font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;letter-spacing:6px">碧芭宝贝</div>
+    <div class="client-logo md" style="background:#9a9a9a;color:#0a0a0a;padding:6px 14px;letter-spacing:2px">bebetour</div>
+    <div class="client-logo lg" style="font-weight:700;letter-spacing:8px;font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;font-size:19px">Acemiss</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-info">
+    <div class="reveal">
+      <div class="section-eyebrow">Contact</div>
+      <div class="section-cn">联 系 我</div>
+      <p class="desc">期待与您合作，<br/>用影像创造更多可能。</p>
+    </div>
+    <div class="c-list">
+      <div class="c-row reveal">
+        <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg></div>
+        <div class="c-text"><div class="l">Phone</div><div class="v">13248355241</div></div>
+      </div>
+      <div class="c-row reveal">
+        <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+        <div class="c-text"><div class="l">Email</div><div class="v">shuyanfeng118@163.com</div></div>
+      </div>
+      <div class="c-row reveal">
+        <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12c1.5 2 4 3 4 3s2.5-1 4-3"/></svg></div>
+        <div class="c-text"><div class="l">WeChat</div><div class="v">Shuyan4118</div></div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Nav: background on scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if(window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Active section highlighting
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  const sectionIds = ['about','works','bts','clients','contact'];
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+  const setActive = (id) => {
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+  };
+  if (sections.length) {
+    const navObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if(e.isIntersecting) setActive(e.target.id); });
+    }, {rootMargin: '-45% 0px -50% 0px', threshold: 0});
+    sections.forEach(s => navObs.observe(s));
+  }
+
+  // Works category filter
+  document.querySelectorAll('.works-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const filter = tab.dataset.filter;
+      document.querySelectorAll('.works-tab').forEach(t => t.classList.toggle('active', t === tab));
+      document.querySelectorAll('.work').forEach(work => {
+        const match = work.dataset.category === filter;
+        work.classList.toggle('hidden', !match);
+        if (match) {
+          const grid = work.querySelector('.work-grid');
+          if (grid) grid.classList.add('in');
+        }
+      });
+      const pg = document.querySelector('.photo-grid');
+      if (pg) pg.classList.toggle('hidden', filter !== 'photo');
+    });
+  });
+
+  // Mobile menu
+  const toggle = document.querySelector('.nav-toggle');
+  const navList = document.querySelector('.nav-links');
+  if (toggle && navList) {
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      navList.classList.toggle('open');
+    });
+    navList.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        navList.classList.remove('open');
+      });
+    });
+  }
+  // Video lazy-load: only fetch + play when each video enters the viewport
+  const lazyVideos = document.querySelectorAll('video[data-src]');
+  if (lazyVideos.length && 'IntersectionObserver' in window) {
+    const videoObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const v = entry.target;
+        if (entry.isIntersecting) {
+          if (!v.dataset.loaded) {
+            v.src = v.dataset.src;
+            v.load();
+            v.dataset.loaded = 'true';
+          }
+          v.play().catch(() => {});
+        } else {
+          v.pause();
+        }
+      });
+    }, { rootMargin: '300px 0px', threshold: 0.05 });
+    lazyVideos.forEach(v => videoObs.observe(v));
+  } else {
+    lazyVideos.forEach(v => {
+      v.src = v.dataset.src;
+      v.load();
+      v.play().catch(() => {});
+    });
+  }
+</script>
+</body>
+</html>
